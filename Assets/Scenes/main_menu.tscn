@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bbpdymurs6hnv"]
+
+[ext_resource type="Script" uid="uid://by5dpekqy3qea" path="res://Assets/scripts/main_menu.gd" id="1_fsbqx"]
+[ext_resource type="Theme" uid="uid://bqf76p26qbpye" path="res://Assets/Themes/BG.tres" id="2_cbhea"]
+
+[node name="Main Menu" type="Control" unique_id=1821259461]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fsbqx")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1203206990]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_cbhea")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=644407984]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 32
+
+[node name="Title" type="Label" parent="PanelContainer/VBoxContainer" unique_id=2049371563]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Tic Tac Toe"
+
+[node name="Control" type="Control" parent="PanelContainer/VBoxContainer" unique_id=1024992558]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="Play" type="Button" parent="PanelContainer/VBoxContainer" unique_id=222348257]
+layout_mode = 2
+text = "Play"
+
+[node name="Quit" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1619218222]
+layout_mode = 2
+text = "Quit"
