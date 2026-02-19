@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="Tic Tac Toe"
+run/main_scene="uid://ckvvj7jnsylm6"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=360
 
 [editor]
 
