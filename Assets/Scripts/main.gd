@@ -2,11 +2,13 @@ extends Control
 
 @onready var packedScenes := {
 	"mainMenu" = preload("res://Assets/Scenes/main_menu.tscn"),
-	"game" = preload("res://Assets/Scenes/game.tscn")
+	"game" = preload("res://Assets/Scenes/game.tscn"),
+	"playersMenu" = preload("res://Assets/Scenes/players.tscn")
 }
 @onready var scenes := {
 	"mainMenu" = null,
-	"game" = null
+	"game" = null,
+	"playersMenu" = null
 }
 
 func _ready() -> void:
@@ -14,5 +16,5 @@ func _ready() -> void:
 	add_child(scenes.mainMenu)
 
 func play():
-	scenes.game = packedScenes.game.instantiate()
-	add_child(scenes.game)
+	scenes.playersMenu = packedScenes.playersMenu.instantiate()
+	add_child(scenes.playersMenu)

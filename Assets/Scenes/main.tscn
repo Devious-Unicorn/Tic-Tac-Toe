@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ckvvj7jnsylm6"]
 
-[ext_resource type="Script" uid="uid://cv61cklno3ukl" path="res://Assets/scripts/main.gd" id="1_l26l0"]
+[ext_resource type="Script" path="res://Assets/scripts/main.gd" id="1_l26l0"]
 
 [node name="Main" type="Control" unique_id=959283758]
 texture_filter = 1
