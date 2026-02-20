@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://cl3k5ovyxhy5h"]
+
+[ext_resource type="Script" uid="uid://d0gtd88clr3dl" path="res://Assets/scripts/game.gd" id="1_lcp10"]
+[ext_resource type="Theme" uid="uid://bqf76p26qbpye" path="res://Assets/Themes/BG.tres" id="1_pfbgl"]
+[ext_resource type="Theme" uid="uid://0ripvp4443yu" path="res://Assets/Themes/Game Button.tres" id="2_lcp10"]
+
+[node name="Game" type="Control" unique_id=1137627446]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lcp10")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=199042986]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_pfbgl")
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer" unique_id=443160601]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 3
+
+[node name="TL" type="Button" parent="PanelContainer/GridContainer" unique_id=1878148539]
+custom_minimum_size = Vector2(66, 66)
+layout_mode = 2
+theme = ExtResource("2_lcp10")
+
+[node name="TC" type="Button" parent="PanelContainer/GridContainer" unique_id=1296903836]
+custom_minimum_size = Vector2(66, 66)
+layout_mode = 2
+theme = ExtResource("2_lcp10")
+
+[node name="TR" type="Button" parent="PanelContainer/GridContainer" unique_id=1815300039]
+custom_minimum_size = Vector2(66, 66)
+layout_mode = 2
+theme = ExtResource("2_lcp10")
+
+[node name="ML" type="Button" parent="PanelContainer/GridContainer" unique_id=669943138]
+custom_minimum_size = Vector2(66, 66)
+layout_mode = 2
+theme = ExtResource("2_lcp10")
+
+[node name="MC" type="Button" parent="PanelContainer/GridContainer" unique_id=538793417]
+custom_minimum_size = Vector2(66, 66)
+layout_mode = 2
+theme = ExtResource("2_lcp10")
+
+[node name="MR" type="Button" parent="PanelContainer/GridContainer" unique_id=192779778]
+custom_minimum_size = Vector2(66, 66)
+layout_mode = 2
+theme = ExtResource("2_lcp10")
+
+[node name="BL" type="Button" parent="PanelContainer/GridContainer" unique_id=1435139461]
+custom_minimum_size = Vector2(66, 66)
+layout_mode = 2
+theme = ExtResource("2_lcp10")
+
+[node name="BC" type="Button" parent="PanelContainer/GridContainer" unique_id=1121957189]
+custom_minimum_size = Vector2(66, 66)
+layout_mode = 2
+theme = ExtResource("2_lcp10")
+
+[node name="BR" type="Button" parent="PanelContainer/GridContainer" unique_id=565348660]
+custom_minimum_size = Vector2(66, 66)
+layout_mode = 2
+theme = ExtResource("2_lcp10")
