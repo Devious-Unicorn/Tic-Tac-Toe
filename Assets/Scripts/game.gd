@@ -15,20 +15,30 @@ var board: Array[Array] = [
 	["", "", ""],
 	["", "", ""]
 ]
+@onready var Bot = $Bot
 
 var turn: String = 'X'
+var inGame := true
 
 func _ready() -> void:
 	for r in range(buttons.size()):
-		for c in range(buttons[r].size()):
-			var button = buttons[r][c]
-			if button:
-				button.pressed.connect(_on_button_pressed.bind(r, c))
+			for c in range(buttons[r].size()):
+				var button = buttons[r][c]
+				if button:
+					button.pressed.connect(_on_button_pressed.bind(r, c))
 	updateLabels()
 
+func _process(delta: float) -> void:
+	if inGame and turn == 'X':
+		pass
+
 func _on_button_pressed(r: int, c: int):
-	board[r][c] = turn;
+	board[r][c] = turn
 	updateLabels()
+	
+	turn = 'O'
+	Bot.takeTurn()
+	turn = 'X'
 
 func updateLabels():
 	for r in range(board.size()):
