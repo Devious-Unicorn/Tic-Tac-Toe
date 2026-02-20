@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://cl3k5ovyxhy5h"]
 
-[ext_resource type="Script" uid="uid://d0gtd88clr3dl" path="res://Assets/scripts/game.gd" id="1_lcp10"]
+[ext_resource type="Script" path="res://Assets/Scripts/game.gd" id="1_lcp10"]
 [ext_resource type="Theme" uid="uid://bqf76p26qbpye" path="res://Assets/Themes/BG.tres" id="1_pfbgl"]
 [ext_resource type="Theme" uid="uid://0ripvp4443yu" path="res://Assets/Themes/Game Button.tres" id="2_lcp10"]
+[ext_resource type="Texture2D" uid="uid://ckb0w7xk7ob8w" path="res://Assets/Sprites/Grid.png" id="3_pb48a"]
+
+[sub_resource type="Theme" id="Theme_lcp10"]
+Label/constants/outline_size = 5
+Label/font_sizes/font_size = 48
 
 [node name="Game" type="Control" unique_id=1137627446]
 layout_mode = 3
@@ -21,6 +26,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_pfbgl")
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer" unique_id=1089226978]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("3_pb48a")
+expand_mode = 1
 
 [node name="GridContainer" type="GridContainer" parent="PanelContainer" unique_id=443160601]
 custom_minimum_size = Vector2(200, 200)
@@ -73,3 +87,83 @@ theme = ExtResource("2_lcp10")
 custom_minimum_size = Vector2(66, 66)
 layout_mode = 2
 theme = ExtResource("2_lcp10")
+
+[node name="GridContainer2" type="GridContainer" parent="PanelContainer" unique_id=440120568]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+columns = 3
+
+[node name="TL" type="Label" parent="PanelContainer/GridContainer2" unique_id=1539179565]
+custom_minimum_size = Vector2(66, 66)
+layout_mode = 2
+theme = SubResource("Theme_lcp10")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TC" type="Label" parent="PanelContainer/GridContainer2" unique_id=139639042]
+custom_minimum_size = Vector2(66, 66)
+layout_mode = 2
+theme = SubResource("Theme_lcp10")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TR" type="Label" parent="PanelContainer/GridContainer2" unique_id=1923552994]
+custom_minimum_size = Vector2(66, 66)
+layout_mode = 2
+theme = SubResource("Theme_lcp10")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ML" type="Label" parent="PanelContainer/GridContainer2" unique_id=1261342714]
+custom_minimum_size = Vector2(66, 66)
+layout_mode = 2
+theme = SubResource("Theme_lcp10")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MC" type="Label" parent="PanelContainer/GridContainer2" unique_id=931136478]
+custom_minimum_size = Vector2(66, 66)
+layout_mode = 2
+theme = SubResource("Theme_lcp10")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MR" type="Label" parent="PanelContainer/GridContainer2" unique_id=197022074]
+custom_minimum_size = Vector2(66, 66)
+layout_mode = 2
+theme = SubResource("Theme_lcp10")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BL" type="Label" parent="PanelContainer/GridContainer2" unique_id=398801349]
+custom_minimum_size = Vector2(66, 66)
+layout_mode = 2
+theme = SubResource("Theme_lcp10")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BC" type="Label" parent="PanelContainer/GridContainer2" unique_id=1817993044]
+custom_minimum_size = Vector2(66, 66)
+layout_mode = 2
+theme = SubResource("Theme_lcp10")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BR" type="Label" parent="PanelContainer/GridContainer2" unique_id=1699818902]
+custom_minimum_size = Vector2(66, 66)
+layout_mode = 2
+theme = SubResource("Theme_lcp10")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
