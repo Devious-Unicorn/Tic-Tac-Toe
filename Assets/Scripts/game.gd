@@ -33,12 +33,16 @@ func _process(delta: float) -> void:
 		pass
 
 func _on_button_pressed(r: int, c: int):
-	board[r][c] = turn
-	updateLabels()
-	
-	turn = 'O'
-	Bot.takeTurn()
-	turn = 'X'
+	inGame = false;
+	for i in range(board.size()): if "" in board[i]: inGame = true
+	if inGame:
+		board[r][c] = turn
+		updateLabels()
+		
+		turn = 'O'
+		Bot.takeTurn()
+		turn = 'X'
+		updateLabels()
 
 func updateLabels():
 	for r in range(board.size()):

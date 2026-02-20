@@ -7,8 +7,27 @@ func _ready() -> void:
 
 func takeTurn():
 	# check if the game will end next round
-	var winner = get_winner_info()
+	# returns {winner, next winning move, coords of next winning move}
+	var winInfo = get_winner_info()
 	
+	print(winInfo)
+	# if the game is already won
+	if winInfo.winner != null:
+		return
+	# if O wins next round then win
+	elif winInfo.next_winning_move == 'O':
+		board[winInfo.coords.y][winInfo.coords.x] = 'O'
+	# if X wins next round block them
+	elif winInfo.next_winning_move == 'X':
+		board[winInfo.coords.y][winInfo.coords.x] = 'O'
+	# if there is a draw next round then fill last spot
+	elif winInfo.next_winning_move == "draw":
+		board[winInfo.coords.y][winInfo.coords.x] = 'O'
+	else:
+		var move := Vector2i(randi_range(0, 2), randi_range(0, 2))
+		while(board[move.y][move.x] != ''):
+			move = Vector2i(randi_range(0, 2), randi_range(0, 2))
+		board[move.y][move.x] = 'O'
 
 func get_winner_info() -> Dictionary:
 	var res = {"winner": null, "next_winning_move": null, "coords": null}
@@ -18,7 +37,7 @@ func get_winner_info() -> Dictionary:
 		for x in range(3):
 			if board[y][x] == "": empty_cells.append(Vector2i(x, y))
 
-	for p in ["X", "O"]:
+	for p in ["O", "X"]:
 		# 1. Check Rows & Cols using a single loop
 		for i in range(3):
 			_eval([Vector2i(0,i), Vector2i(1,i), Vector2i(2,i)], p, res) # Row
