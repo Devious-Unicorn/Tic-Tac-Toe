@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dojb7i1sa3g4r"]
 
 [ext_resource type="Theme" uid="uid://bqf76p26qbpye" path="res://Assets/Themes/BG.tres" id="1_85lxp"]
+[ext_resource type="Script" path="res://Assets/scripts/players.gd" id="1_atawk"]
 [ext_resource type="Texture2D" uid="uid://kaodjjqyl8tn" path="res://Assets/Sprites/OnePlayer.png" id="2_atawk"]
 [ext_resource type="Texture2D" uid="uid://xrpox7jp8voj" path="res://Assets/Sprites/TwoPlayer.png" id="3_pybrn"]
 
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_atawk")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1434368859]
 layout_mode = 1
@@ -55,7 +57,7 @@ text = "One player"
 [node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/VBoxContainer2/VBoxContainer/HBoxContainer" unique_id=365783198]
 layout_mode = 2
 
-[node name="one player" type="TextureButton" parent="PanelContainer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=233321559]
+[node name="two player" type="TextureButton" parent="PanelContainer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=233321559]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4

@@ -18,3 +18,7 @@ func _ready() -> void:
 func play():
 	scenes.playersMenu = packedScenes.playersMenu.instantiate()
 	add_child(scenes.playersMenu)
+
+func loadOnePlayer():
+	scenes.game = packedScenes.game.instantiate()
+	add_child(scenes.game)
