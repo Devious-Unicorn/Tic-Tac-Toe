@@ -171,3 +171,74 @@ vertical_alignment = 1
 
 [node name="Bot" type="Node" parent="." unique_id=1103348826]
 script = ExtResource("5_hni1o")
+
+[node name="Bot win" type="CanvasLayer" parent="." unique_id=1930353021]
+visible = false
+
+[node name="Label" type="Label" parent="Bot win" unique_id=596313063]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 49.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+text = "Oh, No!
+You lost"
+horizontal_alignment = 1
+
+[node name="Player win" type="CanvasLayer" parent="." unique_id=1234844136]
+visible = false
+
+[node name="Label" type="Label" parent="Player win" unique_id=75732149]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 49.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+text = "Hooray!
+you win"
+horizontal_alignment = 1
+
+[node name="Draw" type="CanvasLayer" parent="." unique_id=595463549]
+visible = false
+
+[node name="Label" type="Label" parent="Draw" unique_id=1616028797]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 49.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+text = "Oh, No!
+you and the bot tied"
+horizontal_alignment = 1
+
+[node name="Game End" type="HBoxContainer" parent="." unique_id=79259303]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control3" type="Control" parent="Game End" unique_id=1771508113]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+
+[node name="Replay" type="Button" parent="Game End" unique_id=940491125]
+layout_mode = 2
+text = "Replay"
+
+[node name="Control" type="Control" parent="Game End" unique_id=1882224143]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Quit" type="Button" parent="Game End" unique_id=310740022]
+layout_mode = 2
+text = "Quit"
+
+[node name="Control2" type="Control" parent="Game End" unique_id=279615481]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2

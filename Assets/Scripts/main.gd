@@ -14,5 +14,6 @@ func _ready() -> void:
 	add_child(scenes.mainMenu)
 
 func play():
+	if is_instance_valid(scenes.game): scenes.game.queue_free()
 	scenes.game = packedScenes.game.instantiate()
 	add_child(scenes.game)

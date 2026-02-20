@@ -12,21 +12,25 @@ func takeTurn():
 	
 	# if the game is already won
 	if winInfo.winner != null:
-		return
+		return false
 	# if O wins next round then win
 	elif winInfo.next_winning_move == 'O':
 		board[winInfo.coords.y][winInfo.coords.x] = 'O'
+		return false
 	# if X wins next round block them
 	elif winInfo.next_winning_move == 'X':
 		board[winInfo.coords.y][winInfo.coords.x] = 'O'
+		return false
 	# if there is a draw next round then fill last spot
 	elif winInfo.next_winning_move == "draw":
 		board[winInfo.coords.y][winInfo.coords.x] = 'O'
+		return false
 	else:
 		var move := Vector2i(randi_range(0, 2), randi_range(0, 2))
 		while(board[move.y][move.x] != ''):
 			move = Vector2i(randi_range(0, 2), randi_range(0, 2))
 		board[move.y][move.x] = 'O'
+		return true
 
 func get_winner_info() -> Dictionary:
 	var res = {"winner": null, "next_winning_move": null, "coords": null}
