@@ -10,7 +10,6 @@ func takeTurn():
 	# returns {winner, next winning move, coords of next winning move}
 	var winInfo = get_winner_info()
 	
-	print(winInfo)
 	# if the game is already won
 	if winInfo.winner != null:
 		return
